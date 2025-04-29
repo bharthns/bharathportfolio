@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKB4Imkb9N6D+JbI8D4DQ4kR+7sW1u9KuG1PfPbFOhU0HCN6vZ+zv9aQkcpdxm5Ig1Xzh9how==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background: linear-gradient(135deg, #1e0a3c, #ffd700);
+      color: #222;
+      text-align: center;
+      padding: 20px;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #ffffffdd;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #f7e1ff;
+      color: #6a0dad;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      background-color: #ffffff;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      z-index: 1;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      background-color: #fff;
+      margin: 20px auto;
+      padding: 40px;
+      max-width: 900px;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+      color: #1e0a3c;
+    }
+
+    ul {
+      list-style-position: inside;
+      text-align: left;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    ul li a {
+      color: #6a11cb;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .project {
+      margin-top: 25px;
+    }
+
+    .view-project {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 24px;
+      background-color: #6a0dad;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .view-project:hover {
+      background-color: #4b0082;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #333;
+      padding: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #6a0dad;
+      text-decoration: none;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover {
+      color: #4b0082;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li class="dropdown">
+          <a href="#accomplishments">Accomplishments</a>
+          <div class="dropdown-content">
+            <a href="#certifications">Certifications</a>
+            <a href="#open-source">Open-Source</a>
+          </div>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Hello, I'm Bharath NS</h1>
+    <p>A passionate developer building modern and effective solutions for the web and beyond.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Python (Flask, Django basics)</li>
+      <li>Java (OOP, basic Android)</li>
+    </ul>
+  </section>
+
+  <section id="accomplishments">
+    <h2>Accomplishments</h2>
+    <ul>
+      <li>Fire Rescue Robot using Raspberry Pi - developed a real-world prototype.</li>
+      <li>Completed Python and Web Development certifications.</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h3>Certifications</h3>
+    <ul>
+      <li><a href="https://www.udemy.com/certificate/UC-3363f7a4-6440-4dfb-bb31-6404724a18ad/" target="_blank">The Complete Full-Stack Web Development Bootcamp (Udemy)</a></li>
+      <li><a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_0126051913436938241455_shared/1-15da6701-f303-4de3-8779-8e885d881288.pdf" target="_blank">Data Visualisation using Python (Infosys Sprinboard)</a></li>
+      <li><a href="https://coursera.org/share/11806462bd0bec9637a94c943eace8b4" target="_blank">Introduction to Cybersecurity Fundamentals (Coursera)</a></li>
+    </ul>
+  </section>
+
+  <section id="open-source">
+    <h3>Open-Source Contributions</h3>
+    <ul>
+      <li>Contributed to web-automation tool on GitHub.</li>
+      <li>Submitted bug fixes and feature improvements in Flask projects.</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Calculator</h3>
+      <p>A simple calculator built using HTML, CSS, and JavaScript.</p>
+      <a href="calculator.html" class="view-project">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>Weather forecasting app using OpenWeatherMap API and JavaScript.</p>
+      <a href="weather.html" class="view-project">View Project</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:bharathns0506@gmail.com">bharathns0506@gmail.com</a></p>
+    <p>Phone: +91 95354 21537</p>
+    <div class="socials">
+      <a href="https://github.com/bharthns" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/bharath-n-s-a46638256" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Bharath NS. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
